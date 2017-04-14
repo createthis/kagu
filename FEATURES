@@ -1,0 +1,21 @@
+- MP3 playback via Gstreamer on MAEMO platform.
+- MP3 playback via Mplayer on other platforms (i.e. other linux distros)
+- A2DP Support via mplayer and Bluetooth ALSA (i.e. a2dpd)
+  (This last was the original primary motivation for Kagu)
+- Inertial spinning selection control. Drag to
+  spin, tap to stop spinning. (This was the secondary motivation)
+- Last.FM / MaemoScrobbler support. Get 
+  recommendations for new music and find people
+  with similar musical interests!
+- Strong focus on clean object oriented design.
+- SQLite3 database backend for storing song 
+  information (ID3 tags, etc)
+- Remote control interface:
+    ./kagu.py -remote pause
+    ./kagu.py -remote next
+    ./kagu.py -remote prev
+    ./kagu.py -remote stop
+- Theme engine (this isn't 100% supported yet)
+- Maemo Battery/Screen aware for intelligent battery usage optimization.
+- Scrolling Album/Artist/Song Title text!
+- Automatic download of Album *and* Artist cover art images, including Zoom functionality!

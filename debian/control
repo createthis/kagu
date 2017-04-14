@@ -1,0 +1,24 @@
+Source: kagu
+Section: user/multimedia
+Priority: optional
+Maintainer: Jesse Guardiani <jesse@guardiani.us>
+Build-Depends: debhelper (>= 4.0.0), python2.5-dev
+Standards-Version: 3.6.1
+
+Package: kagu
+Architecture: all
+Depends: python2.5, python2.5-dbus, python2.5-hildon, python2.5-gtk2, python2.5-gobject, python2.5-osso, python2.5-pygame, osso-mediaengine (>=1.0)
+Description: Kagu Media Player
+XB-Maemo-Icon-26: iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAQAAAADQ4RFAAAACXBIWXMAAAsT
+  AAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqY
+  AAAXb5JfxUYAAAGcSURBVHjanJQ9aJRBEEDfbL6gCQQtFASDQuxyEi3EMnYK
+  9oIIWlhdITZqbSumEaxMYyWIWCmmEX8K0wRElFioEYSABFHwl0Qv3z6LO3Ne
+  LnfhbqbY2dl5zLDMTAyv/k4AiQAyQSYIRAACGnZQl5Sj8daTpKJnaMDUeyJJ
+  mT7K64OhqB+7uESFgmWmecjKJlBENvbzhB1rriUeM8933vOIEXbyZn1xRmSj
+  02csMcQ25njGMjdY/JdHDuY5Z53ylt1l0csOiZgyx3JVRDzizCbgqlWTkYmM
+  Tb3SESjVu553uB3CKWc7gtP1mExaByGesNYS/MLTPlD1pxcd2RjCcV+q8771
+  qXpSxAPeVPV6e3lNPSO+dsGz//n2esHJbhBW/OG5dn83aI86sdFLbvTeIRI1
+  djPKUe5wG4AKUOUqH4DtFHwGxvjCN+JVXogJ9rW0z30ynxjlGqc4zju2MkbJ
+  PcY5zFc+Gn/yYLSOWPP6nF9MtnVkaazkLdHbNNVMg33MbYo+JjfsY4UVZRmJ
+  xjJ0bQnWrUwAiQGgBBIC5r8DAMdgm5IsDkA2AAAAAElFTkSuQmCC
+  ====

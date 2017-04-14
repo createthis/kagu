@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Encoding=UTF-8
+Name=Kagu Music Scanner
+Exec=/usr/bin/kagu-scanner
+Icon=kagu
+Type=Application
+StartupWMClass=kaguscanner
+X-Osso-Type=application/x-executable
+#X-Osso-Service=com.nokia.kaguscanner
+X-Window-Icon=kagu
+X-Window-Icon-Dimmed=kagu
+X-Icon-Path=/usr/share/icons

@@ -1,0 +1,29 @@
+#!/bin/sh
+cd /usr/lib/kagu
+if [ "x$DBUS_SESSION_BUS_ADDRESS" = "x" ]; then
+  export DBUS_SESSION_BUS_ADDRESS="unix:path=/tmp/session_bus_socket"
+fi
+if [ "x$SESSION_BUS_PID_FILE" = "x" ]; then
+  # could use $USER instead but it's $SUDO_USER sometimes
+  U=`whoami`
+  if [ "x$U" = "xroot" ]; then
+    U="user"
+  fi
+  export SESSION_BUS_PID_FILE="/tmp/dbus_session_bus.pid.$U"
+fi
+./kagu-scanner.py $@ >/tmp/kaguscanner.log 2>&1
+KAG=$?
+tail -50 /tmp/kaguscanner.log
+if [ "x$KAG" = "x20" ]; then
+  rm /tmp/kaguscanner.log
+  exec /usr/bin/kagu
+elif [ "x$KAG" != "x0" ]; then
+  echo exited with code $KAG >>/tmp/kaguscanner.log
+  if [ -e ~/MyDocs/ ]; then
+    tail -50 /tmp/kaguscanner.log > ~/MyDocs/kaguscanner-lastcrash.log
+  else
+    tail -50 /tmp/kaguscanner.log > ~/kaguscanner-lastcrash.log
+  fi
+fi
+rm /tmp/kaguscanner.log
+return $KAG

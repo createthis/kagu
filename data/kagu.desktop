@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Encoding=UTF-8
+Name=Kagu Media Player
+Exec=/usr/bin/kagu
+Icon=kagu
+Type=Application
+StartupWMClass=kagu
+X-Osso-Type=application/x-executable
+X-Osso-Service=com.nokia.kagu
+X-Window-Icon=kagu
+X-Window-Icon-Dimmed=kagu
+X-Icon-Path=/usr/share/icons

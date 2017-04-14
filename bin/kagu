@@ -1,0 +1,22 @@
+#!/bin/sh
+cd /usr/lib/kagu
+if [ "x$1" = "x-remote" ]; then
+    ./kagu.py $@
+    return $?
+fi
+./kagu.py $@ >/tmp/kagu.log 2>&1
+KAG=$?
+tail -50 /tmp/kagu.log
+if [ "x$KAG" = "x21" ]; then
+  rm /tmp/kagu.log
+  exec /usr/bin/kagu-scanner
+elif [ "x$KAG" != "x0" ]; then
+  echo exited with code $KAG >>/tmp/kagu.log
+  if [ -e ~/MyDocs/ ]; then
+    tail -50 /tmp/kagu.log > ~/MyDocs/kagu-lastcrash.log
+  else
+    tail -50 /tmp/kagu.log > ~/kagu-lastcrash.log
+  fi
+fi
+rm /tmp/kagu.log
+return $KAG

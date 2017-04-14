@@ -1,0 +1,8 @@
+#!/bin/sh
+
+gtk-update-icon-cache -f /usr/share/icons/hicolor
+
+/bin/chown user.users -R /home/user/.kagu/ >/dev/null 2>&1
+/bin/su user - -c "/usr/bin/kagu-scanner --install"
+
+#DEBHELPER#

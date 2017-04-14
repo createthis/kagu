@@ -1,0 +1,166 @@
+kagu (1.0.10-3) unstable; urgency=low
+
+  * Maintenance release
+  * Renamed "Songs" as "Tracks"
+  * Fix Chinook sleep timer, high cpu usage and history handling
+  * Fix a crash occuring while removing single track from playlist
+
+ -- Kemal Hadimli <disqkk@gmail.com>  Tue, 18 Dec 2007 00:05:00 +0300
+
+kagu (1.0.10-2) unstable; urgency=low
+
+  * Fix crash regarding empty track # and dbusapi
+  * Added remote enhancements
+
+ -- Kemal Hadimli <disqkk@gmail.com>  Sat, 17 Nov 2007 02:20:00 +0300
+
+kagu (1.0.10) unstable; urgency=low
+
+  * Headphone sense - music paused/unpaused when headphones are plugged/unplugged
+  * Made save playlist combo-shortcut work in all screens
+  * Added history-combo to save playlist dialog
+  * Added playlist shuffling/randomization, removed random playback mode
+  * Added Settings menu to group settings together
+  * Added Auto-play toggle to Settings menu
+  * Added Genres screen
+  * Album/Artist/Genre lists now show item counts
+  * Now Playing cover image fallback, to show the artist image if no cover found
+  * Option to choose between artist or album images in Now Playing button and Cover screen
+  * Added year display to album list
+  * Added sort by year option to Settings
+  * Startup time improvements
+  * Added confirmation dialog to Playlist Clear button
+  * Scanner now ignores hidden files and directories
+  * Delete playlist option to Playlists screen
+  * Chinook installation and operation fixes
+  * Added notification for missing files
+  * Added headset button support to toggle playback (Chinook only)
+  * Added sleep timer activation notification
+  * Turn off screen option removed, will be back in a later version
+  * Added DBus signals for playback notifications
+  * Added Music menu
+
+ -- Kemal Hadimli <disqkk@gmail.com>  Fri, 16 Nov 2007 18:00:00 +0300
+
+kagu (1.0.9-3) unstable; urgency=low
+
+  * Fix crash regarding scrollbar changes in -2 and volume slider
+
+ -- Kemal Hadimli <disqkk@gmail.com>  Mon, 15 Oct 2007 17:30:00 +0300
+
+kagu (1.0.9-2) unstable; urgency=low
+
+  * Add toggle scrollbars option, scrollbars default to disabled
+
+ -- Kemal Hadimli <disqkk@gmail.com>  Mon, 15 Oct 2007 16:00:00 +0300
+
+kagu (1.0.9) unstable; urgency=low
+
+  * New theme!
+  * Added 2-hour option to Sleep Timer
+  * Made heuristic cover search optional in Scanner
+  * Artist grouping changed, utilizing the "album artist" tag if it exists
+  * Artist and album names are normalized to Title Case
+  * Hold thumb at NowPlayingButton and hit the dpad center for Playlist Save As, only available in Now Playing
+  * Hold thumb at NowPlayingButton and hit the menu key to jump to artist songs/albums functionality, works almost anywhere
+  * Added default player selection to main menu (available only if mplayer is installed)
+  * Cover art load times are faster, and no longer a black screen
+  * Various other startup time optimizations
+  * Added scrollbars
+  * Performance and UI enhancements
+
+ -- Kemal Hadimli <disqkk@gmail.com>  Mon, 15 Oct 2007 15:00:00 +0300
+
+kagu (1.0.8) unstable; urgency=low
+
+  * Add artist images to Artists View
+  * New theme!
+  * Added Sleep Timer and Turn Off Screen options to the menu
+  * Added Playlist View, Scanner now also scans for playlists
+  * Added volume button, changed Volume View
+  * WMA and AAC support
+  * Added key combos, hold thumb at NowPlayingButton and use the dpad for actions
+  * Remove one from playlist option (via dedicated icon, or combo+dpadcenter)
+  * Added key combo to re-arrange songs in the playlist (Combo+dpad up or combo+dpad down to move selected song up or down)
+  * Scanner: Made scans incremental, added option to do a full scan
+  * Scanner: Update artist and album names from AudioScrobbler (if possible)
+  * Scanner: Recursion depth increased
+  * Scanner: Added --batch-mode option
+  * Moved database and covers to ~/.kagu
+  * Crash logs now saved to MyDocs
+  * Plenty of bugfixes
+  * Performance and UI enhancements
+
+ -- Kemal Hadimli <disqkk@gmail.com>  Mon, 17 Sep 2007 21:10:00 +0300
+
+kagu (1.0.7) unstable; urgency=low
+
+  * Added Artists and All Songs views
+  * ScrollWidget now support really really really long lists
+  * Improved Album Art view (default to 300*X now)
+  * Plenty of bugfixes
+
+ -- Jesse Guardiani <jesse@guardiani.us>  Mon, 03 Sep 2007 12:30:00 -0500
+
+kagu (1.0.6) unstable; urgency=low
+
+  * Ability to view album covers seperately
+  * Editable playlist support: Enqueue whole album and clear playlist buttons
+  * Improved album seperation logic: Support compilation albums
+  * Filename parser as a fallback to the ID3 parser
+  * Initial OGG support (requires ogg support in the system, upstream ogg on n800 is broken)
+  * Fix the installation/run problem on Nokia 770
+  * Plenty of bugfixes
+  * Performance and UI enhancements
+  * Updated theme
+
+ -- Kemal Hadimli <disqkk@gmail.com>  Tue, 20 Aug 2007 01:10:00 +0300
+
+kagu (1.0.5) unstable; urgency=low
+
+  * Fix postinst script permission problems
+  * Support exec loops back and forth between kagu and kagu-scanner
+  * NowPlayingButton not visible if the playlist is empty
+  * Faster scrolling
+  * Performance enhancements
+
+ -- Kemal Hadimli <disqkk@gmail.com>  Tue, 14 Aug 2007 15:25:00 +0300
+
+kagu (1.0.4) unstable; urgency=low
+
+  * Postinst script to remove previous db
+
+ -- Kemal Hadimli <disqkk@gmail.com>  Tue, 13 Aug 2007 19:14:00 +0300
+
+kagu (1.0.3) unstable; urgency=low
+
+  * Many performance enhancements
+  * New theme
+  * Playback mode (repeat/repeat one/shuffle/normal)
+  * SongPositionView for seeking in songs and audio books.
+  * No more OK button in Album/Song/NowPlaying views. Instead, just tap an
+    item to select it.
+
+ -- Kemal Hadimli <disqkk@gmail.com>  Tue, 12 Aug 2007 19:13:00 +0300
+
+kagu (1.0.2) unstable; urgency=low
+
+  * Many performance enhancements
+  * Lower RAM usage
+  * Fixed a few bugs in the theme engine
+  * Switched to using mplayer's ffmp3 instead of libmp3 for a2dp playback.
+    ffmp3 is more efficient on ARM.
+
+ -- Kemal Hadimli <disqkk@gmail.com>  Tue, 6 Aug 2007 04:42:00 +0300
+
+kagu (1.0.1) unstable; urgency=low
+
+  * Fix dependencies
+
+ -- Kemal Hadimli <disqkk@gmail.com>  Tue, 30 Jul 2007 04:35:00 +0300
+
+kagu (1.0) unstable; urgency=low
+
+  * Initial release
+
+ -- Kemal Hadimli <disqkk@gmail.com>  Tue, 30 Jul 2007 00:10:00 +0300
